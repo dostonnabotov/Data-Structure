@@ -49,13 +49,13 @@ console.log(fruits.length);
 // Array Example #5
 // 3 x 3 matrix calculator
 let a = [
-    // write the first matrix numbers
+    // write the first matrix values
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ];
 let b = [
-    // write the second matrix numbers
+    // write the second matrix values
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
