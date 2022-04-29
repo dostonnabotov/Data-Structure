@@ -1,3 +1,6 @@
+/*********************\
+    ARRAY - Beginner 
+\*********************/
 
 var array = [10, 20, 30, 40, 50];
 // indexes   0   1   2   3   4
@@ -6,8 +9,6 @@ var array = [10, 20, 30, 40, 50];
 console.log(array[2]);
 
 // which means that, I want to get the element that is under index no.2, which in our case is 30
-
-
 
 // Array Example #1
 // Adding numbers from array
@@ -24,7 +25,6 @@ studentScores.push(80, 40);
 
 console.log(studentScores);
 
-
 // Array Example #3
 // use of pop
 let subscribers = ["John", "James", "David", "Alexander"];
@@ -32,7 +32,6 @@ let subscribers = ["John", "James", "David", "Alexander"];
 let unsubscribed = subscribers.pop();
 
 console.log(unsubscribed);
-
 
 // Array Example #4
 // combination of push and pop
@@ -45,30 +44,29 @@ fruits.pop();
 
 console.log(fruits.length);
 
-
 // Array Example #5
 // 3 x 3 matrix calculator
 let a = [
-    // write the first matrix values
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  // write the first matrix values
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
 ];
 let b = [
-    // write the second matrix values
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  // write the second matrix values
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
 ];
 let result;
 
 if (a.length === 3 && b.length === 3) {
-    console.log(a[0][0] + b[0][0], a[0][1] + b[0][1], a[0][2] + b[0][2]);
-    console.log(a[1][0] + b[1][0], a[1][1] + b[1][1], a[1][2] + b[1][2]);
-    console.log(a[2][0] + b[2][0], a[2][1] + b[2][1], a[2][2] + b[2][2]);
+  console.log(a[0][0] + b[0][0], a[0][1] + b[0][1], a[0][2] + b[0][2]);
+  console.log(a[1][0] + b[1][0], a[1][1] + b[1][1], a[1][2] + b[1][2]);
+  console.log(a[2][0] + b[2][0], a[2][1] + b[2][1], a[2][2] + b[2][2]);
 
-    // this nested for loop shows the output in one line rather than in matrix form
-    /*
+  // this nested for loop shows the output in one line rather than in matrix form
+  /*
     for (let row = 0; row <= 2; row++) {
         for (let col = 0; col <= 2; col++) {
             result = a[row][col] + b[row][col];
@@ -77,5 +75,5 @@ if (a.length === 3 && b.length === 3) {
     }
     */
 } else {
-    console.log("It works only for 3x3 matrix");
+  console.log("It works only for 3x3 matrix");
 }
