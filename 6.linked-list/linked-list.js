@@ -1,58 +1,82 @@
 class LinkedList {
-    constructor() {
-        this.list = [];
-    }
+  constructor() {
+    this.list = [];
+  }
 
-    addHead(element) {
-        return this.list.unshift(element);
-    }
+  // add element from head
+  addHead(element) {
+    return this.list.unshift(element);
+  }
 
-    addTail(element) {
-        return this.list.push(element);
-    }
+  // add element from tail
+  addTail(element) {
+    return this.list.push(element);
+  }
 
-    removeHead() {
-        return this.list.shift();
-    }
+  // remove the first element
+  removeHead() {
+    return this.list.shift();
+  }
 
-    removeTail() {
-        return this.list.pop();
-    }
+  // remove the last element
+  removeTail() {
+    return this.list.pop();
+  }
 
-    peekHead() {
-        return this.list[this.list.length - this.list.length];
-    }
+  // view the first element
+  peekHead() {
+    return this.list[this.list.length - this.list.length];
+  }
 
-    peekTail() {
-        return this.list[this.list.length - 1];
-    }
+  // view the last element
+  peekTail() {
+    return this.list[this.list.length - 1];
+  }
 
-    // check if the list is empty
-    isEmpty() {
-        return this.list.length == 0;
-    }
+  // the size of the list
+  size() {
+    return this.array.length;
+  }
 
-    clear() {
-        return this.list = [];
-    }
+  // check if the list is empty
+  isEmpty() {
+    return this.list.length == 0;
+  }
+
+  // empty the list
+  clear() {
+    this.list = [];
+  }
 }
 
-let linkedList = new LinkedList;
+let linkedList = new LinkedList();
 
-linkedList.addHead(2);
-linkedList.addHead(8);
-linkedList.addTail(6);
-linkedList.addTail(4);
+linkedList.addHead("Word");
+linkedList.addHead("Excel");
+linkedList.addTail("PowerPoint");
+linkedList.addTail("Teams");
+// ["Excel", "Word", "PowerPoint", "Teams"]
 
-console.log(linkedList.list);
+linkedList.peekHead();
+// Excel
 
-console.log(linkedList.peekHead());
-console.log(linkedList.peekTail());
+linkedList.peekTail();
+// Teams
+
+linkedList.isEmpty();
+// false
 
 linkedList.removeHead();
+// [ "Word", "PowerPoint", "Teams"]
+
+linkedList.size();
+// 3
+
 linkedList.removeTail();
+// [ "Word", "PowerPoint" ]
 
-console.log(linkedList.list);
+linkedList.clear();
+// []
 
-console.log(linkedList.clear());
-console.log(linkedList.isEmpty());
+linkedList.isEmpty();
+// true

@@ -1,61 +1,66 @@
 // program to implement stack data structure
 class Stack {
-    constructor() {
-        this.array = [];
-    }
+  constructor() {
+    this.array = [];
+  }
 
-    // add element at rear
-    add(element) {
-        return this.array.push(element);
-    }
+  // add element at rear
+  add(element) {
+    return this.array.push(element);
+  }
 
-    // remove element at rear
-    remove() {
-        if (this.array.length != 0) {
-            return this.array.pop();
-        }
-
-        else {
-            console.log("empty array");
-        }
+  // remove element at rear
+  remove() {
+    if (this.array.length != 0) {
+      return this.array.pop();
+    } else {
+      console.log("empty array");
     }
+  }
 
-    // view the last element
-    peek() {
-        return this.array[this.array.length - 1];
-    }
+  // view the last element
+  peek() {
+    return this.array[this.array.length - 1];
+  }
 
-    // check if the stack is empty
-    isEmpty() {
-        return this.array.length == 0;
-    }
+  // check if the stack is empty
+  isEmpty() {
+    return this.array.length == 0;
+  }
 
-    // the size of the stack
-    size() {
-        return this.array.length;
-    }
+  // the size of the stack
+  size() {
+    return this.array.length;
+  }
 
-    // empty the stack
-    clear() {
-        this.array = [];
-    }
+  // empty the stack
+  clear() {
+    this.array = [];
+  }
 }
 
 let stack = new Stack();
+
 stack.add("Word");
 stack.add("Excel");
 stack.add("PowerPoint");
 stack.add("Teams");
-console.log(stack.array);
+// [ 'Word', 'Excel', 'PowerPoint', 'Teams' ]
 
 stack.remove();
-console.log(stack.array);
+// [ 'Word', 'Excel', 'PowerPoint' ]
 
-console.log(stack.peek());
+stack.peek();
+// PowerPoint
 
-console.log(stack.isEmpty());
+stack.isEmpty();
+// false
 
-console.log(stack.size());
+stack.size();
+// 3
 
 stack.clear();
-console.log(stack.array);
+// []
+
+stack.isEmpty();
+// true

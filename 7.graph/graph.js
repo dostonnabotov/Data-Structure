@@ -1,4 +1,3 @@
-// program to implement graph data structure
 class Graph {
   constructor() {
     this.adjacentList = new Map();
@@ -57,7 +56,6 @@ graph.addEdge("E", "D");
 graph.addEdge("F", "E");
 graph.addEdge("E", "A");
 
-// expected output:
 // A --> B C E
 // B --> A C
 // C --> A B E

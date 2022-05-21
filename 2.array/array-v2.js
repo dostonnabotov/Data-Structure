@@ -1,8 +1,6 @@
-/**************************\
-    ARRAY - Intermediate
-\**************************/
 /*--------------
-Layout: 
+  ARRAY - v2
+  Layout: 
     1. Map
     2. Filter
     3. Find
@@ -24,11 +22,10 @@ const items = [
 
 // Map
 const mapItems = items.map((item) => item.price * 2);
-// expected output: [ 400, 1800, 30, 600, 100, 300 ]
+// [ 400, 1800, 30, 600, 100, 300 ]
 
 // Filter
 const filterItems = items.filter((item) => item.price <= 150);
-// expected output:
 // [
 //   { name: "Book", price: 15 },
 //   { name: "Phone", price: 50 },
@@ -37,19 +34,18 @@ const filterItems = items.filter((item) => item.price <= 150);
 
 // Find
 const findItems = items.find((item) => item.name === "Book");
-// expected output: { name: 'Book', price: 15 }
+// { name: 'Book', price: 15 }
 
 // Some
 const someItems = items.some((item) => item.price <= 100);
-// expected output: true
+// true
 
 // Every
 const everyItems = items.every((item) => item.price <= 100);
-// expected output: false
+// false
 
 // Sort - ascending order
 const sortItems_ascend = items.sort((a, b) => a.price - b.price);
-// expected output:
 // [
 //   { name: "Book", price: 15 },
 //   { name: "Phone", price: 50 },
@@ -61,7 +57,6 @@ const sortItems_ascend = items.sort((a, b) => a.price - b.price);
 
 // Sort - ascending order
 const sortItems_descend = items.sort((a, b) => b.price - a.price);
-// expected output:
 // [
 //   { name: "Car", price: 900 },
 //   { name: "Bike", price: 300 },
@@ -75,13 +70,12 @@ const sortItems_descend = items.sort((a, b) => b.price - a.price);
 const reduceItems = items.reduce((currentTotal, item) => {
   return item.price + currentTotal;
 }, 0);
-// expected output: 1615
+// 1615
 
 // forEach
 items.forEach((item, index) => {
   // console.log(`${item.name} in index of ${index} costs $${item.price}`);
 });
-// expected output:
 // Car in index of 0 costs 900
 // Bike in index of 1 costs 300
 // TV in index of 2 costs 200
@@ -90,10 +84,13 @@ items.forEach((item, index) => {
 // Includes
 const pets = ["car", "bike", "laptop"];
 pets.includes("car");
-// expected output: true
+// true
 
 pets.includes("computer");
-// expected output: false
+// false
 
 pets.includes("Bike");
-// expected output: false
+// false
+
+// Check the result in the console
+// console.log(variableName);
