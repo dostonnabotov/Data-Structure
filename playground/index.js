@@ -68,3 +68,39 @@ times10(9);
 // Result:  90
 // Result:  80
 // Fetched from cache:  9
+
+// calculate sum of given input using argumnets
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+
+sum(5, 8, 2, 6);
+// 21
+
+
+// destructing object into a variable
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const { today, tomorrow } = HIGH_TEMPERATURES;
+
+// same as:
+// const today = HIGH_TEMPERATURES.today;
+// const tomorrow = HIGH_TEMPERATURES.tomorrow;
+
+// destructing object and assigning a new variable
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES
+
+// same as:
+// const highToday = HIGH_TEMPERATURES.today;
+// const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
